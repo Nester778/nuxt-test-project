@@ -55,7 +55,7 @@ const itemsPerPage = 8
 
 const fetchNews = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/news')
+    const response = await fetch('/api/news')
     allNewsList.value = await response.json()
     newsList.value = allNewsList.value.slice(0, itemsPerPage)
   } catch (error) {
