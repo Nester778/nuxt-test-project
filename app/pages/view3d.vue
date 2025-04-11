@@ -49,7 +49,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (viewer) {
-    viewer.dispose(); // ВАЖНО освободить ресурсы
+    viewer.dispose();
     viewer = null;
   }
 });
