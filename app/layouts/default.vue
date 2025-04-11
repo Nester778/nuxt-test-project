@@ -31,12 +31,10 @@
           <ColorModeSelector />
         </div>
         
-        <!-- Кнопка для мобильного меню -->
         <div class="sm:hidden">
           <UIcon name="i-lucide-menu" class="size-8 bg-gray-50" @click="toggleMenu" />
         </div>
-  
-        <!-- Мобильное меню -->
+
         <div v-show="isMenuOpen" class="sm:hidden bg-teal-500 dark:bg-teal-700 py-4">
           <ul class="flex flex-col space-y-4 text-white">
             <li class="flex items-center space-x-2">
@@ -56,13 +54,11 @@
           </ul>
         </div>
       </nav>
-  
-      <!-- Основной контент -->
+
       <main class="flex-1 container mx-auto max-w-8xl">
         <slot></slot>
       </main>
   
-      <!-- Подвал -->
       <footer class="bg-teal-700 dark:bg-teal-500 text-white py-10 mt-10 px-8">
         <div class="text-center space-y-4 container mx-auto max-w-8xl">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -94,8 +90,7 @@
   
   <script setup lang="ts">
     const isMenuOpen = ref(false)
-  
-    // Функция для переключения состояния меню
+
     const toggleMenu = () => {
       isMenuOpen.value = !isMenuOpen.value
     }
